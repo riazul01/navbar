@@ -46,3 +46,21 @@ for (let i = 0; i < colorBtns.length; i ++) {
         }
     });
 }
+
+
+// themes
+const lightTheme = document.querySelector('#light-theme');
+const darkThemeBtn = document.querySelector('#dark-theme-btn');
+const lightThemeBtn = document.querySelector('#light-theme-btn');
+
+darkThemeBtn.onclick = () => {
+    lightTheme.setAttribute('disabled', true);
+    darkThemeBtn.classList.add('active-theme-btn');
+    lightThemeBtn.classList.remove('active-theme-btn');
+}
+
+lightThemeBtn.onclick = () => {
+    lightTheme.removeAttribute('disabled');
+    darkThemeBtn.classList.remove('active-theme-btn');
+    lightThemeBtn.classList.add('active-theme-btn');
+}
