@@ -1,13 +1,16 @@
 (function () {
     const toggler = document.querySelector('.toggler');
     const navBar = document.querySelector('.navbar');
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownList = document.querySelector('.dropdown-list');
     const settings = document.querySelector('.settings');
     const body = document.querySelector('body');
 
-    // remove navbar while click on body
+    // remove navbar/dropdown while click on body
     body.addEventListener('click', () => {
         toggler.classList.remove('active');
         navBar.classList.remove('active-nav');
+        dropdownList.classList.remove('active');
     });
 
     // toggle bar
@@ -19,6 +22,14 @@
     });
 
     navBar.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    dropdown.addEventListener('click', () => {
+        dropdownList.classList.toggle('active');
+    });
+
+    dropdownList.addEventListener('click', (e) => {
         e.stopPropagation();
     });
 })();

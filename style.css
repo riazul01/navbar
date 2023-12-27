@@ -69,6 +69,33 @@ body {
     align-items: center;
 }
 
+.navbar ul li.dropdown {
+    position: relative;
+}
+
+.navbar ul li.dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.navbar ul li.dropdown > .dropdown-list {
+    padding: 1rem 0;
+    position: absolute;
+    top: 3.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    background: #222;
+    border-radius: 0.3rem;
+}
+
+.navbar ul li.dropdown > .dropdown-list.active {
+    display: flex;
+}
+
 .navbar ul li a {
     padding: 0.8rem 1.2rem;
     position: relative;
@@ -96,6 +123,10 @@ body {
     pointer-events: none;
     transform: translateX(-50%);
     animation: nav-link-anim 0.4s ease-in-out forwards;
+}
+
+.navbar ul li.dropdown a.active-link::before {
+    left: 43%;
 }
 
 @keyframes nav-link-anim {
@@ -370,6 +401,22 @@ section h1 {
     .navbar ul {
         flex-direction: column;
     }
+
+    .navbar ul li.dropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul li.dropdown > .dropdown-list {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: translateX(0);
+        background: #333;
+    }
+    
 
     .settings {
         z-index: 1;
