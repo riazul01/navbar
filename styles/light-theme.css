@@ -36,6 +36,14 @@ body {
     border: 1px solid #ddd;
 }
 
+.navbar ul li.dropdown > .dropdown-list {
+    background: #ddd;
+}
+
+footer > p {
+    color: #222;
+}
+
 @media screen and (max-width: 720px) {
     .navbar {
         background: #ddd;
