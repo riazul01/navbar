@@ -142,6 +142,117 @@ section h1 {
     color: #fff;
     font-size: 3rem;
 }
-
-
 /* sections end */
+
+
+
+/* settings start */
+.settings {
+    padding: 1rem;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    z-index: 99999;
+}
+
+.toggle-settings {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    border-radius: 0.2rem 0 0 0.2rem;
+    border-right: 1px solid silver;
+    box-sizing: border-box;
+}
+
+.toggle-settings span {
+    color: #111;
+    font-size: 1.4rem;
+    animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.colors h4,
+.themes h4,
+.views h4 {
+    padding-bottom: 0.4rem;
+    color: #2e2e3f;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-bottom: 2px dashed silver;
+}
+
+.colors-box {
+    margin: 0.8rem 0 0.6rem 0.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.color-btn {
+    margin-right: 1rem;
+}
+
+.color-btn span {
+    font-size: 2rem;
+}
+
+.themes,
+.views {
+    margin-top: 1rem;
+}
+
+.themes-box,
+.views-box {
+    margin: 0.8rem 0 0.6rem 0;
+}
+
+.theme,
+.view {
+    margin-bottom: 0.4rem;
+    padding: 0.6rem 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.theme.active-theme-btn,
+.view.active-view-btn  {
+    background: silver;
+}
+
+.theme:hover,
+.view:hover {
+    background: silver;
+}
+
+.theme span,
+.view span {
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.theme p,
+.view p {
+    color: #222;
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
+}
+/* settings end*/
