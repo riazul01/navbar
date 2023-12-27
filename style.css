@@ -371,6 +371,19 @@ section h1 {
 /* settings end*/
 
 
+/* footer */
+footer {
+    position: fixed;
+    bottom: 1rem;
+    left: 3rem;
+    z-index: 3;
+}
+
+footer > p {
+    font-size: 1.1rem;
+}
+
+
 @media screen and (max-width: 720px) {
     .toggler {
         display: grid;
