@@ -14,7 +14,7 @@ body {
 }
 
 .section-contents {
-    background: #ccc;
+    background: rgb(204, 204, 204, 0.3);
 }
 
 .section-contents > h1 {

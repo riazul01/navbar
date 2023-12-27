@@ -134,7 +134,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #222;
+    background: rgba(34, 34, 34, 0.5);
     border-radius: 2rem;
 }
 
