@@ -1,0 +1,5 @@
+.navbar ul li a:hover,
+.navbar ul li a.active-link,
+.navbar ul li a.active-link::before {
+    color: #1e90ff;
+}

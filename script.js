@@ -1,3 +1,4 @@
+// navbar
 let navLinks = document.querySelectorAll('.navbar > ul > li > a');
 
 for (let i = 0; i < navLinks.length; i ++) {
@@ -9,7 +10,7 @@ for (let i = 0; i < navLinks.length; i ++) {
     });
 }
 
-
+// settings
 let settings = document.querySelector('.settings');
 let toggleSettings = document.querySelector('.toggle-settings');
 
@@ -28,3 +29,20 @@ body.addEventListener('click', () => {
 settings.addEventListener('click', (e) => {
     e.stopPropagation();
 });
+
+
+// color switch
+let colorLinks = document.querySelectorAll('.color-link');
+let colorBtns = document.querySelectorAll('.color-btn');
+
+for (let i = 0; i < colorBtns.length; i ++) {
+    colorBtns[i].addEventListener('click', () => {
+        console.log(colorBtns[i].getAttribute('data-color'));
+        for (let j = 0; j < colorLinks.length; j ++) {
+            colorLinks[j].setAttribute('disabled', true);
+            if (colorBtns[i].getAttribute('data-color') === colorLinks[j].getAttribute('data-color')) {
+                colorLinks[j].removeAttribute('disabled');
+            }
+        }
+    });
+}
