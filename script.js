@@ -217,10 +217,15 @@
             sections[index].classList.add(animations[animIndex]);
         }
 
+        let prevIndex = null;
+
         const handleSectionView = (index) => {
             activateNavLink(index);
             activateSection(index);
-            activeAnimation(index);
+            if (prevIndex !== index) {
+                activeAnimation(index);
+            }
+            prevIndex = index;
         }
 
         // control navigation
