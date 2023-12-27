@@ -48,4 +48,8 @@ footer > p {
     .navbar {
         background: #ddd;
     }
+
+    .navbar ul li.dropdown > .dropdown-list {
+        background: #ccc;
+    }
 }
