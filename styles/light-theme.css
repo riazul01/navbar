@@ -13,6 +13,12 @@ body {
     color: #333;
 }
 
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after {
+    background: #222;
+}
+
 .section-contents {
     background: rgb(204, 204, 204, 0.3);
 }
@@ -28,4 +34,10 @@ body {
 .toggle-settings {
     top: -1px;
     border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 720px) {
+    .navbar {
+        background: #ddd;
+    }
 }

@@ -1,13 +1,41 @@
+(function () {
+    const toggler = document.querySelector('.toggler');
+    const navBar = document.querySelector('.navbar');
+    const settings = document.querySelector('.settings');
+    const body = document.querySelector('body');
+
+    // remove navbar while click on body
+    body.addEventListener('click', () => {
+        toggler.classList.remove('active');
+        navBar.classList.remove('active-nav');
+    });
+
+    // toggle bar
+    toggler.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggler.classList.toggle('active');
+        navBar.classList.toggle('active-nav');
+        settings.classList.remove('show-settings');
+    });
+
+    navBar.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+})();
+
 // settings
 (function () {
     const settings = document.querySelector('.settings');
     const toggleSettings = document.querySelector('.toggle-settings');
-
+    const toggler = document.querySelector('.toggler');
+    const navBar = document.querySelector('.navbar');
     const body = document.querySelector('body');
 
     // toggle switch box
     toggleSettings.addEventListener('click', () => {
         settings.classList.toggle('show-settings');
+        navBar.classList.remove('active-nav');
+        toggler.classList.remove('active');
     });
 
     // close switch box
@@ -72,7 +100,7 @@
     const navLinks = document.querySelectorAll('.nav-items > li > a');
 
     const animations = [
-        'animate__bounce', 
+        'animate__bounce',
         'animate__flash',
         'animate__pulse', 
         'animate__rubberBand',

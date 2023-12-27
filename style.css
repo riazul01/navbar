@@ -108,6 +108,64 @@ body {
         opacity: 0;
     }
 }
+
+.toggler {
+    position: fixed;
+    top: 1.6rem;
+    left: 2.8rem;
+    width: 50px;
+    height: 45px;
+    display: none;
+    place-items: center;
+    cursor: pointer;
+    border-radius: 0.1rem;
+    z-index: 999;
+}
+
+.toggle-bar {
+    position: relative;
+    height: 3px;
+    width: 32px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.toggle-bar::before {
+    position: absolute;
+    content: '';
+    top: -0.7rem;
+    left: 0;
+    height: 3px;
+    width: 32px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.toggle-bar::after {
+    position: absolute;
+    content: '';
+    top: 0.7rem;
+    left: 0;
+    height: 3px;
+    width: 32px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.toggler.active .toggle-bar {
+    background: transparent;
+    transform: rotate(40deg);
+}
+
+.toggler.active .toggle-bar::before {
+    transform: rotate(-85deg);
+    top: 0;
+}
+
+.toggler.active .toggle-bar::after {
+    transform: rotate(5deg);
+    top: 0;
+}
 /* header end */
 
 
@@ -280,3 +338,54 @@ section h1 {
     margin-left: 0.4rem;
 }
 /* settings end*/
+
+
+@media screen and (max-width: 720px) {
+    .toggler {
+        display: grid;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 5rem;
+        left: 3rem;
+        width: 240px;
+        height: auto;
+        background: #222;
+        border-radius: 0.4rem;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+    }
+
+    .navbar.active-nav {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .settings {
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .toggler {
+        left: 1.2rem;
+    }
+
+    .navbar {
+        left: 1.2rem;
+    }
+
+    section {
+        padding: 6rem 1.2rem 3rem 1.2rem;
+    }
+}
