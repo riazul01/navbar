@@ -107,19 +107,19 @@ body {
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
+/* .navbar ul li a:hover {
     color: orange;
 }
 
 .navbar ul li a.active-link {
     color: orange;
-}
+} */
 
 .navbar ul li a.active-link::before {
     position: absolute;
     content: attr(data-list);
     left: 50%;
-    color: orange;
+    /* color: orange; */
     pointer-events: none;
     transform: translateX(-50%);
     animation: nav-link-anim 0.4s ease-in-out forwards;
