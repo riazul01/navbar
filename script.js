@@ -34,6 +34,8 @@
     });
 })();
 
+
+
 // settings
 (function () {
     const settings = document.querySelector('.settings');
@@ -63,17 +65,20 @@
 
 // switch color
 (function () {
-    const colorLinks = document.querySelectorAll('.color-link');
     const colorBtns = document.querySelectorAll('.color-btn');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+    const footerLink = document.querySelector('footer > p > a');
+    let prevIndex = 0;
 
     for (let i = 0; i < colorBtns.length; i ++) {
         colorBtns[i].addEventListener('click', () => {
-            for (let j = 0; j < colorLinks.length; j ++) {
-                colorLinks[j].setAttribute('disabled', true);
-                if (colorBtns[i].getAttribute('data-color') === colorLinks[j].getAttribute('data-color')) {
-                    colorLinks[j].removeAttribute('disabled');
-                }
+            for (let j = 0; j < navLinks.length; j ++) {
+                navLinks[j].classList.remove(colorBtns[prevIndex].getAttribute('data-color'));
+                footerLink.classList.remove(colorBtns[prevIndex].getAttribute('data-color'));
+                navLinks[j].classList.add(colorBtns[i].getAttribute('data-color'));
+                footerLink.classList.add(colorBtns[i].getAttribute('data-color'));
             }
+            prevIndex = i;
         });
     }
 })();
@@ -82,18 +87,18 @@
 
 // switch theme
 (function () {
-    const lightTheme = document.querySelector('#light-theme');
+    const body = document.querySelector('body');
     const darkThemeBtn = document.querySelector('#dark-theme-btn');
     const lightThemeBtn = document.querySelector('#light-theme-btn');
 
     darkThemeBtn.onclick = () => {
-        lightTheme.setAttribute('disabled', true);
+        body.classList.remove('light');
         darkThemeBtn.classList.add('active-theme-btn');
         lightThemeBtn.classList.remove('active-theme-btn');
     }
 
     lightThemeBtn.onclick = () => {
-        lightTheme.removeAttribute('disabled');
+        body.classList.add('light');
         darkThemeBtn.classList.remove('active-theme-btn');
         lightThemeBtn.classList.add('active-theme-btn');
     }
