@@ -8,13 +8,13 @@ Bondstein coding task1
 ## Features
 ✅ Responsive navbar with dropdown toggle menu <br/>
 ✅ Added color, theme, and view mood change functionality <br/>
-✅ Implemented ScrollSpy feature in scroll view mood <br/>
-✅ Implemented Sections animations in section view mood <br/>
+✅ Implemented ScrollSpy feature in scroll view mode <br/>
+✅ Implemented Sections animations in section view mode <br/>
 
 ## Preview
 
 #### Desktop view
-![01](https://github.com/riazul01/navbar/assets/141500318/0b977f13-9ff7-46cb-8712-2ae078d618ec)
+![01](https://github.com/riazul01/navbar/assets/141500318/2faae828-ebf4-4b7f-b8f7-84484cd6b9d4)
 
 #### Mobile view
-![02](https://github.com/riazul01/navbar/assets/141500318/149e2839-b99f-4be5-9568-74ec652b967e)
+![02](https://github.com/riazul01/navbar/assets/141500318/d40d20de-4b48-45f5-ae19-4407a58b9381)
