@@ -394,6 +394,8 @@ footer > p > a {
 /* colors */
 .navbar ul li a.orange:hover,
 .navbar ul li a.orange.active-link,
+body.light .navbar ul li a.orange:hover,
+body.light .navbar ul li a.orange.active-link,
 .navbar ul li a.orange.active-link::before,
 footer > p > a.orange {
     color: orange;
@@ -401,6 +403,8 @@ footer > p > a.orange {
 
 .navbar ul li a.blue:hover,
 .navbar ul li a.blue.active-link,
+body.light .navbar ul li a.blue:hover,
+body.light .navbar ul li a.blue.active-link,
 .navbar ul li a.blue.active-link::before,
 footer > p > a.blue {
     color: #1e90ff;
@@ -408,6 +412,8 @@ footer > p > a.blue {
 
 .navbar ul li a.green:hover,
 .navbar ul li a.green.active-link,
+body.light .navbar ul li a.green:hover,
+body.light .navbar ul li a.green.active-link,
 .navbar ul li a.green.active-link::before,
 footer > p > a.green {
     color: #22dd1b;
@@ -415,6 +421,8 @@ footer > p > a.green {
 
 .navbar ul li a.purple:hover,
 .navbar ul li a.purple.active-link,
+body.light .navbar ul li a.purple:hover,
+body.light .navbar ul li a.purple.active-link,
 .navbar ul li a.purple.active-link::before,
 footer > p > a.purple {
     color: #f43fee;
@@ -422,6 +430,8 @@ footer > p > a.purple {
 
 .navbar ul li a.salmon:hover,
 .navbar ul li a.salmon.active-link,
+body.light .navbar ul li a.salmon:hover,
+body.light .navbar ul li a.salmon.active-link,
 .navbar ul li a.salmon.active-link::before,
 footer > p > a.salmon {
     color: #f46f60;
@@ -429,6 +439,8 @@ footer > p > a.salmon {
 
 .navbar ul li a.red:hover,
 .navbar ul li a.red.active-link,
+body.light .navbar ul li a.red:hover,
+body.light .navbar ul li a.red.active-link,
 .navbar ul li a.red.active-link::before,
 footer > p > a.red {
     color: #ed2b33;
@@ -436,6 +448,8 @@ footer > p > a.red {
 
 .navbar ul li a.violate:hover,
 .navbar ul li a.violate.active-link,
+body.light .navbar ul li a.violate:hover,
+body.light .navbar ul li a.violate.active-link,
 .navbar ul li a.violate.active-link::before,
 footer > p > a.violate {
     color: #5f4b8b;
@@ -443,6 +457,8 @@ footer > p > a.violate {
 
 .navbar ul li a.olive:hover,
 .navbar ul li a.olive.active-link,
+body.light .navbar ul li a.olive:hover,
+body.light .navbar ul li a.olive.active-link,
 .navbar ul li a.olive.active-link::before,
 footer > p > a.olive {
     color: #8ab92c;
@@ -450,6 +466,8 @@ footer > p > a.olive {
 
 .navbar ul li a.gray:hover,
 .navbar ul li a.gray.active-link,
+body.light .navbar ul li a.gray:hover,
+body.light .navbar ul li a.gray.active-link,
 .navbar ul li a.gray.active-link::before,
 footer > p > a.gray {
     color: #778899;
@@ -457,6 +475,8 @@ footer > p > a.gray {
 
 .navbar ul li a.crimson:hover,
 .navbar ul li a.crimson.active-link,
+body.light .navbar ul li a.crimson:hover,
+body.light .navbar ul li a.crimson.active-link,
 .navbar ul li a.crimson.active-link::before,
 footer > p > a.crimson {
     color: #ff0077;
@@ -465,7 +485,7 @@ footer > p > a.crimson {
 
 
 
-/* light mode */
+/* light theme */
 body.light::-webkit-scrollbar-track {
     background-color: #ccc;
 }
@@ -479,6 +499,11 @@ body.light {
 
 body.light .navbar ul li a {
     color: #333;
+}
+
+body.light .navbar ul li a.active-link,
+body.light .navbar ul li a:hover {
+    color: orange;
 }
 
 body.light .toggle-bar,
@@ -511,6 +536,7 @@ body.light .navbar ul li.dropdown > .dropdown-list {
 body.light footer > p {
     color: #222;
 }
+/* light theme end */
 
 
 
